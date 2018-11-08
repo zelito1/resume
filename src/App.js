@@ -1,5 +1,5 @@
 import React,{ Component } from 'react';
-import { BrowserRouter, Route,NavLink} from 'react-router-dom';
+import { HashRouter, Route,NavLink} from 'react-router-dom';
 
 import './App.css';
 
@@ -17,7 +17,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={title().title}>
-       <BrowserRouter>
+       <HashRouter>
               <div>
                 <Route exact path="/" component={Index}/>
                 <Route path="/product" component={Product}/>
@@ -34,7 +34,7 @@ class App extends Component {
                   </div>
                 </div>
               </div>
-            </BrowserRouter>
+            </HashRouter>
         </Provider>
     );
   }
